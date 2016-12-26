@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="xyz" class="com.cf.test.Customer">
+		<property name="name" value="Abc"></property>
+		<property name="email">
+			<list>
+				<value>abc@email.com</value>
+				<value>def@outlook.com</value>
+				<value>pqr@gmail.com</value>
+			</list>
+		</property>
+		<property name="jobs">
+			<list>
+				<value>Job1</value>
+				<value>job2</value>
+				<value>job3</value>
+			</list>
+		</property>
+		
+		<property name="food">
+			<set>
+				<value>Food1</value>
+				<value>Food2</value>
+				<value>Food3</value>
+			</set>
+		</property>
+		<property name="previusjob">
+			<map>
+			     <entry key='p1'>
+			         <value>job1</value>
+			      </entry>
+			      <entry key='p2'>
+			         <value>job2</value>
+			      </entry>     
+			</map>
+		</property>
+	</bean>
+</beans>
+
