@@ -2,13 +2,13 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-	<bean id="customer" class="com.cf.test.Customer" > 
+	<bean id="customer" class="com.cf.test.Customer" scope="prototype"> 
 	    <property name="name" value="ABC"></property>
 	    <property name="email" value="ABC@email.com"></property>
 	    <property name="address" ref="add"></property>
 	</bean>
 	
-	<bean id="add" class="com.cf.test.Address">
+	<bean id="add" class="com.cf.test.Address" scope="prototype">
 	    <constructor-arg index="0" value="Bangalore"></constructor-arg>
 	    <constructor-arg index="1" value="KA"></constructor-arg>
 	    <constructor-arg index="2" value="India"></constructor-arg>
