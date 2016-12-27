@@ -9,6 +9,10 @@ public class CustomerManger {
        ApplicationContext ac = new ClassPathXmlApplicationContext("com/Spring-Customer.xml");
        Customer cu = (Customer)ac.getBean("customer");
        System.out.println(cu);
+       
+       Customer cu1 = (Customer)ac.getBean("customer");
+       System.out.println(cu1);
+       
 	}
 
 }
