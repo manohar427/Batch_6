@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean id="registrationController" class="com.test.RegistrationController">
+ <property name="formView" value="registration.jsp"></property>
+ <property name="commandClass" value="com.test.RegistrationForm"></property>
+ <property name="commandName" value="registrationForm"></property>
+ <property name="validator" ref="loginValidator"></property>
+</bean>
+<bean id="loginValidator" class="com.test.RegistrationFormValidator">
+</bean>
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="registration.do">registrationController</prop>
+			</props>
+		</property>
+	</bean>
+	<bean
+	  class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+	  <property name="exceptionMappings">
+		<props>
+			<prop key="com.test.UploadException">
+				error1.jsp
+			</prop>
+			<prop key="java.lang.RuntimeException">error1.jsp</prop>
+		</props>
+	  </property>
+	</bean>
+</beans>
