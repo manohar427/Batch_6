@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+@SuppressWarnings("rawtypes")
 public class Customer {
 	private String name;
 	private String email[];

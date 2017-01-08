@@ -10,6 +10,7 @@ public class HelloController implements Controller {
 
 	public ModelAndView handleRequest(HttpServletRequest arg0,
 			HttpServletResponse arg1) throws Exception {
+		//BL 
 		return new ModelAndView("response.jsp", "hello", "Hi How are you");
 	}
 
