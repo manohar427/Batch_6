@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="customerService" class="com.cf.test.CustomerService">
+		<property name="name" value="Manohar Sambayyapalem" />
+		<property name="url" value="http://www.ctfs.com" />
+	</bean>
+
+	<bean id="hijackBeforeMethodBean" class="com.cf.test.HijackBeforeMethod" />
+	<bean id="hijackAfterMethodBean" class="com.cf.test.HijackAfterMethod" />
+	<bean id="hijackAroundMethodBean" class="com.cf.test.HijackAroundMethod" />
+	<bean id="hijackThrowExcepMethodBean" class="com.cf.test.HijackThrowException" />
+
+	<bean id="customerServiceProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+
+		<property name="target" ref="customerService" />
+
+		<property name="interceptorNames">
+			<list>
+				<value>hijackBeforeMethodBean</value>
+				<value>hijackAfterMethodBean</value>
+				<value>hijackAroundMethodBean</value>
+				<!--<value>hijackThrowExcepMethodBean</value> -->
+			</list>
+		</property>
+	</bean>
+</beans>

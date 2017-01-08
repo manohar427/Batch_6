@@ -1,0 +1,6 @@
+com\cf\test\HijackThrowException.class
+com\cf\test\CustomerService.class
+com\cf\test\HijackBeforeMethod.class
+com\cf\test\AOP_Manager.class
+com\cf\test\HijackAfterMethod.class
+com\cf\test\HijackAroundMethod.class
