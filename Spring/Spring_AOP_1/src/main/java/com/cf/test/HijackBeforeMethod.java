@@ -7,5 +7,7 @@ public class HijackBeforeMethod implements MethodBeforeAdvice {
 	public void before(Method method, Object[] args, Object target)
 			throws Throwable {
 		System.out.println("HijackBeforeMethod : Before method hijacked!");
+		//call db
+		//log ip addrrs
 	}
 }
