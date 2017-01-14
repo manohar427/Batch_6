@@ -4,7 +4,7 @@
 
 	<bean id="customerService" class="com.cf.test.CustomerService">
 		<property name="name" value="Manohar Sambayyapalem" />
-		<property name="url" value="http://www.ctfs.com" />
+		<property name="url" value="http://www.coursefounder.com" />
 	</bean>
 
 	<bean id="hijackBeforeMethodBean" class="com.cf.test.HijackBeforeMethod" />
